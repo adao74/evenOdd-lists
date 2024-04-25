@@ -40,7 +40,15 @@
             console.log(usersWord)
         }
 
-        function handleSubmit() {
+        function handleSubmit(e) {
+            console.log(e)
+
+            // prevent form from reloading page when you are submitting. 
+            // If don't use this, page reloads, browser "does a GET request to the URL endpoint that has submitted data as query parameter"
+            e.preventDefault()  
+            
+            
+
             let newListItem = document.createElement('LI')
             newListItem.innerText = usersWord
 
